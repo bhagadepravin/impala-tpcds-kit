@@ -6,6 +6,7 @@ This simplifies creating TPC-DS datasets at large scales on a Hadoop cluster.
 To get set up, you need to run
 
 ```
+cd tpcds-gen
 $ make
 ```
 
