@@ -6,6 +6,7 @@ This simplifies creating TPC-DS datasets at large scales on a Hadoop cluster.
 To get set up, you need to run
 
 ```
+$ impala-tpcds-kit/tpcds-gen
 $ make
 ```
 
@@ -14,6 +15,7 @@ This will download the TPC-DS dsgen program, compile it and use maven to build t
 To generate the data use a variation of the following command to specify the target directory in HDFS (`-d`), the scale factor in GB (`-s 10000`, for 10TB), and the parallelism to use (`-p 100`).
 
 ```
+$ hadoop jar target/tpcds-gen-1.0-SNAPSHOT.jar -d /tmp/tpc-ds/sf10000/ -p 100 -s 3
 $ hadoop jar target/tpcds-gen-1.0-SNAPSHOT.jar -d /tmp/tpc-ds/sf10000/ -p 100 -s 10000
 ```
 
